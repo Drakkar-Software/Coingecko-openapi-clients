@@ -5,7 +5,7 @@
 export COINGECKO_BASE_URL="https://api.coingecko.com/api/v3"
 ```
 
-## Typescript ![NPM](https://img.shields.io/npm/v/coingecko-openapi-client)
+## Typescript ![https://www.npmjs.com/package/coingecko-openapi-client](https://img.shields.io/npm/v/coingecko-openapi-client)
 
 ### Install
 ```
