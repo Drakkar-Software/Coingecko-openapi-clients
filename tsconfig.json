@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "rootDir": "./",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "lib": ["es6"],
+    "declaration": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "incremental": true
+  },
+  "include": ["client/typescript/**/*", "examples/typescript/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

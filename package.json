@@ -1,0 +1,32 @@
+{
+  "name": "coingecko-openapi-client",
+  "description": "Coingecko openapi client",
+  "version": "0.0.1",
+  "main": "dist/client/typescript/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drakkar-Software/coingecko-openapi-client"
+  },
+  "keywords": [
+    "openapi",
+    "client",
+    "typescript",
+    "coingecko"
+  ],
+  "author": "Drakkar-Software",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "generate": "openapi-typescript-codegen --input schema.yaml --output client/typescript",
+    "start": "node dist/examples/typescript/coins-list.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "openapi-typescript-codegen": "0.27.0",
+    "prettier": "3.1.0",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@8.15.2"
+}
