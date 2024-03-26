@@ -31,13 +31,20 @@ pnpm build
 pnpm start
 ```
 
-## Python
+## Python [![NPM](https://img.shields.io/pypi/v/coingecko-openapi-client)](https://pypi.org/project/coingecko-openapi-client/)
 
 ### Install
 
 ```
 pip3 install coingecko-openapi-client
 ```
+
+### Usage
+
+```
+python3 examples/python/coins-list.py
+```
+
 
 ## Developers
 
