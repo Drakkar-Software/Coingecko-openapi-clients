@@ -7,8 +7,24 @@ on:
 
 jobs:
   publish-pip:
-    uses: Drakkar-Software/.github/.github/workflows/python3_sdist_workflow.yml@master
-    secrets:
-      PYPI_OFFICIAL_UPLOAD_URL: ${{ secrets.PYPI_OFFICIAL_UPLOAD_URL }}
-      PYPI_USERNAME: __token__
-      PYPI_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10.x'
+          architecture: 'x64'
+
+      - name: Install dependencies
+        run: pip install -r dev_requirements.txt -r requirements.txt
+        working-directory: ./client/python
+
+      - name: Build sdist
+        run: python setup.py sdist
+        working-directory: ./client/python
+
+      - name: Publish package
+        run: |
+          python -m twine upload --repository-url ${{ secrets.PYPI_OFFICIAL_UPLOAD_URL }} -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} --skip-existing dist/*
+        working-directory: ./client/python
