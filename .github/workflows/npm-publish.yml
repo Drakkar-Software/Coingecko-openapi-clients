@@ -1,4 +1,4 @@
-name: Coingecko API - Publish
+name: Coingecko API - Publish npm
 
 on:
   push:

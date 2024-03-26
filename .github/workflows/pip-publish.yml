@@ -1,0 +1,14 @@
+name: Coingecko API - Publish python
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish-pip:
+    uses: Drakkar-Software/.github/.github/workflows/python3_sdist_workflow.yml@master
+    secrets:
+      PYPI_OFFICIAL_UPLOAD_URL: ${{ secrets.PYPI_OFFICIAL_UPLOAD_URL }}
+      PYPI_USERNAME: __token__
+      PYPI_PASSWORD: ${{ secrets.PYPI_TOKEN }}
