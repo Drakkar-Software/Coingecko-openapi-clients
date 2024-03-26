@@ -31,7 +31,7 @@ pnpm build
 pnpm start
 ```
 
-## Python [![NPM](https://img.shields.io/pypi/v/coingecko-openapi-client)](https://pypi.org/project/coingecko-openapi-client/)
+## Python [![PYPI](https://img.shields.io/pypi/v/coingecko-openapi-client)](https://pypi.org/project/coingecko-openapi-client/)
 
 ### Install
 
