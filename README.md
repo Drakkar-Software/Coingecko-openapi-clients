@@ -31,6 +31,14 @@ pnpm build
 pnpm start
 ```
 
+## Python
+
+### Install
+
+```
+pip3 install coingecko-openapi-client
+```
+
 ## Developers
 
 ### Regenerate client
@@ -46,3 +54,16 @@ wget https://www.coingecko.com/api/documentations/v3/swagger.json -O swagger.jso
 ```
 pnpx openapi-typescript-codegen --input swagger.json --output client/typescript --name CoingeckoAPIClient
 ```
+
+#### Python
+
+```
+docker run --rm -v ./:/local swaggerapi/swagger-codegen-cli generate \
+          -i /local/swagger.json \
+          -l python \
+          -o /local/client/python \
+          --library asyncio \
+          --additional-properties=packageName=coingecko_openapi_client \
+          --additional-properties=projectName=coingecko-openapi-client \
+          --additional-properties=packageUrl=https://github.com/Drakkar-Software/coingecko-openapi-clients
+``` 
