@@ -75,4 +75,4 @@ docker run --rm -v ./:/local swaggerapi/swagger-codegen-cli generate \
           --additional-properties=packageUrl=https://github.com/Drakkar-Software/coingecko-openapi-clients
 ``` 
 
-Then patch the generated client with by replacing all `response_type=None` by `response_type='str'`
+Then patch the generated client with by replacing all `response_type=None` by `response_type=object`
