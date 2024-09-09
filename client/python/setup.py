@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "coingecko-openapi-client"
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,6 +23,7 @@ VERSION = "1.2.0"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
+    "aiohttp>=3.10.5",
     "certifi>=2017.4.17",
     "python-dateutil>=2.1",
     "six>=1.10",

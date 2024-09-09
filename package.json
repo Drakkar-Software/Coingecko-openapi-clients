@@ -1,7 +1,7 @@
 {
   "name": "coingecko-openapi-client",
   "description": "Coingecko openapi client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/client/typescript/index.js",
   "repository": {
     "type": "git",
